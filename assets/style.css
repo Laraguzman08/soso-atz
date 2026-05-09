@@ -62,4 +62,10 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1; 
+    animation: surgirVideo 2s ease forwards
+}
+
+@keyframes surgirVideo {
+    0%   { opacity: 0; } 
+    100% { opacity: 1; }
 }
