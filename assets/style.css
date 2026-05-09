@@ -16,6 +16,24 @@ body {
     transform: perspective(500px) rotateX(15deg);
     /* display: inline-block é necessário para que o transform funcione;
     transform: perspective() cria profundidade 3D, rotateX() deixa o texto inclinado */
+    animation: surgir 2s ease forwards;
+    /* surgir = nome da animação
+    2s: duração
+    ease: começa rápido e termina devagar
+    forwards: mantém o estado final da animação ao terminar  */
+}
+
+@keyframes surgir {
+    0% { 
+        opacity: 0; /* começa invisível */
+        transform: perspective(500px) rotateX(15deg) translateY(-30px); 
+        /* começa invisível e um pouco acima */
+    }
+    100% { 
+        opacity: 1; /* termina visível */
+        transform: perspective(500px) rotateX(15deg) translateY(0); 
+        /* termina visível na posição normal */
+    }
 }
 
 .mensagemInicial {
