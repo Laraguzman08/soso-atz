@@ -14,3 +14,11 @@ body {
     /* display: inline-block é necessário para que o transform funcione;
     transform: perspective() cria profundidade 3D, rotateX() deixa o texto inclinado */
 }
+
+.mensagemInicial {
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    animation: fadeInOut 4s forwards;
+}
