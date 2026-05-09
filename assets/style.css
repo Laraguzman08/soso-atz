@@ -1,0 +1,16 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    color: #fff;
+    display: inline-block;
+    transform: perspective(500px) rotateX(15deg);
+    /* display: inline-block é necessário para que o transform funcione;
+    transform: perspective() cria profundidade 3D, rotateX() deixa o texto inclinado */
+}
