@@ -5,6 +5,7 @@ body {
     background-color: #000000;
     color: #ffffff;
     position: relative;
+    animation: surgirTela 2s ease forwards
 }
 
 header {
@@ -123,10 +124,9 @@ h3 {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    animation: surgirVideo 2s ease forwards
 }
 
-@keyframes surgirVideo {
+@keyframes surgirTela {
     0% {
         opacity: 0;
     }
