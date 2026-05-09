@@ -23,6 +23,7 @@ body {
     2s: duração
     ease: começa rápido e termina devagar
     forwards: mantém o estado final da animação ao terminar  */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
 
 @keyframes surgir {
@@ -44,6 +45,7 @@ body {
     font-weight: 300;
     letter-spacing: 0.3em;
     animation: fadeInOut 5s forwards;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
 }
 
 /* @keyframes define uma animação passo a passo; "fadeInOut" é o nome da animação */
