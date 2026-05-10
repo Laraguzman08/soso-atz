@@ -1,3 +1,5 @@
+/* estilizando páginas home e members */
+
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400&family=Cormorant+Garamond:wght@300;400&display=swap');
 /* importando duas fontes, a to título + texto comum */
 
@@ -11,7 +13,7 @@ body {
 header {
     position: sticky;
     top: 0;
-    z-index: 10; 
+    z-index: 10;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -30,11 +32,15 @@ p {
     text-shadow: #000000 0px 0px 5px, #000000 0px 0px 10px, #000000 0px 0px 20px;
     margin: 0;
     padding: 0;
-    flex: 1; /* ocupa o espaço restante sem ultrapassar */
-    min-width: 0; /* impede o texto de vazar pra fora */
+    flex: 1;
+    /* ocupa o espaço restante sem ultrapassar */
+    min-width: 0;
+    /* impede o texto de vazar pra fora */
     align-self: flex-start;
-    word-break: break-word; /* quebra palavras longas */
-    overflow-wrap: break-word; /* garante que o texto não vaze */
+    word-break: break-word;
+    /* quebra palavras longas */
+    overflow-wrap: break-word;
+    /* garante que o texto não vaze */
     text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
 
@@ -106,7 +112,8 @@ h3 {
 }
 
 .ateez {
-    opacity: 0.80;;
+    opacity: 0.80;
+    ;
 }
 
 .group {
