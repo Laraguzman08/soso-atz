@@ -9,7 +9,6 @@
 </head>
 
 <body id="body1">
-    <div id="filtro"></div>
     <audio autoplay loop id="fundo-audio">
         <source src="../assets/adren-song.mp3" type="audio/mpeg">
     </audio>
@@ -29,6 +28,20 @@
         </nav>
     </header>
 
+    <main class="container-fluid py-5 px-5">
+        <h2 class="mb-5">Discografia do ATEEZ (2018-2026)</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="album-list">
+
+                    <div class="album-item" onclick="mostrarMusicas('ep1')">
+                        <img src="../assets/disco1.avif" alt="First Mini Album" class="album-capa">
+                        <p style="font-weight: 600;">Treasure EP.1: All to Zero</p>
+                    </div>
+                </div>
+            </div>
+    </main>
 
 
     <footer class="px-2 py-2">
@@ -37,4 +50,5 @@
 
     <script src="../scripts/som.js"></script>
 </body>
+
 </html>

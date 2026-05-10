@@ -143,6 +143,12 @@ h3 {
     z-index: -1;
 }
 
+.album-capa {
+    width: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
 @keyframes surgirTela {
     0% {
         opacity: 0;
