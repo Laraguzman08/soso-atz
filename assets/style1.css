@@ -150,6 +150,16 @@ h3 {
     box-shadow: #000000 0px 0px 10px, #000000 0px 0px 20px, #000000 0px 0px 30px;
 }
 
+/* esconde a barra de rolagem no Firefox */
+.albuns {
+    scrollbar-width: none;
+}
+
+/* esconde a barra de rolagem no Chrome */
+.albuns::-webkit-scrollbar {
+    display: none;
+}
+
 @keyframes surgirTela {
     0% {
         opacity: 0;
