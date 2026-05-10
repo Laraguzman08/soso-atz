@@ -9,6 +9,9 @@
 </head>
 
 <body id="body1">
+    <video autoplay muted loop playsinline id="fundo-vid">
+        <source src="../assets/dance-vid.mp4" type="video/mp4">
+    </video>
     <audio autoplay loop id="fundo-audio">
         <source src="../assets/adren-song.mp3" type="audio/mpeg">
     </audio>
@@ -32,15 +35,31 @@
         <h2 class="mb-5">Discografia do ATEEZ (2018-2026)</h2>
 
         <div class="row">
-            <div class="col-md-4">
-                <div class="album-list">
+        <div class="col-md-4">
+            <div class="album-list">
 
-                    <div class="album-item" onclick="mostrarMusicas('ep1')">
-                        <img src="../assets/disco1.avif" alt="First Mini Album" class="album-capa">
-                        <p style="font-weight: 600;">Treasure EP.1: All to Zero</p>
-                    </div>
+                <div class="album-item" onclick="mostrarMusicas('ep1')">
+                    <img src="../assets/disco1.avif" alt="First Mini Album" class="album-capa">
+                    <p style="font-weight: 600;">TREASURE EP.1: All to Zero</p>
                 </div>
+
+                <div class="album-item" onclick="mostrarMusicas('ep2')">
+                    <img src="../assets/disco2.avif" alt="Second Mini Album" class="album-capa">
+                    <p style="font-weight: 600;">TREASURE EP.2: Zero to One</p>
+                </div>
+
+                <div class="album-item" onclick="mostrarMusicas('ep3')">
+                    <img src="../assets/disco3.avif" alt="Third Mini Album" class="album-capa">
+                    <p style="font-weight: 600;">TREASURE EP.3: One to All</p>
+                </div>
+
+                <div class="album-item" onclick="mostrarMusicas('ep4')">
+                    <img src="../assets/disco4.avif" alt="Fourth Mini Album" class="album-capa">
+                    <p style="font-weight: 600;">TREASURE EP.FIN: All to Action</p>
+                </div>
+
             </div>
+        </div>
     </main>
 
 
