@@ -44,8 +44,9 @@ p {
     text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
 
-.p2 {
+.card-text {
     font-weight: 500;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
     color: black;
 }
 
