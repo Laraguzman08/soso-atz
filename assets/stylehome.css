@@ -23,11 +23,10 @@ main {
 p {
     font-family: 'Cormorant Garamond', serif;
     color: #ffffff;
-    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
 
 .p1 {
-    font-weight: 600;
+    font-weight: 500;
     text-shadow: #000000 0px 0px 5px, #000000 0px 0px 10px, #000000 0px 0px 20px;
     margin: 0;
     padding: 0;
@@ -36,6 +35,16 @@ p {
     align-self: flex-start;
     word-break: break-word; /* quebra palavras longas */
     overflow-wrap: break-word; /* garante que o texto não vaze */
+    text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 20px #000000;
+}
+
+.p2 {
+    font-weight: 500;
+    color: black;
+}
+
+#body1 {
+    background-color: hsl(228, 19%, 10%);
 }
 
 h2 {
