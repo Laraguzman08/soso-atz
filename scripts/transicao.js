@@ -1,5 +1,5 @@
 function redirecionar() {
-    window.location.href = "home.html";
+    window.location.href = "../home.html";
     // não colocar public/ antes, pois o arquivo transicao e home já estão na mesma pasta
 }
 
