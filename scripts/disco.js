@@ -45,5 +45,19 @@ const musicas = {
             "Stay",
             "My Way"
         ]
-    }
+    },
+    ep2: {
+        nome: "TREASURE EP.2: Zero To One",
+        data: "January 15, 2019",
+        tipo: "Mini Album",
+        playlist: "https://www.youtube.com/watch?v=QbjmVyP9RFg&list=OLAK5uy_k6TmIaA2eJo_9VwRxfC3MDnTu4dH6H6Do",
+        musicas: [
+            "HALA HALA (Hearts Awakened, Live Alive)",
+            "Say My Name",
+            "Desire",
+            "Light",
+            "Promise",
+            "From (CD only)"
+        ]
+    },
 }
