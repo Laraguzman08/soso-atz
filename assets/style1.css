@@ -160,6 +160,26 @@ h3 {
     display: none;
 }
 
+#musicas {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    min-height: 50vh;
+    max-width: 40vw;
+    position: sticky;
+    top: 5rem;
+    display: none;
+}
+
+#musicas h3 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+#musicas a {
+    color: #ffffff;
+    text-shadow: 0 0 0.3rem #ffffff, 0 0 0.6rem #ffffff;
+    text-decoration: underline;
+}
+
 @keyframes surgirTela {
     0% {
         opacity: 0;
