@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function mostrarMusicas(id) {
     // "id" é o album clicado, por exemplo "ep1"
     const album = musicas[id];
-    const display = document.getElementById('musicas');
+    const display = document.getElementById('musicas'); // div onde as músicas serão exibidas
 
     let html = `<h3>${album.nome}</h3>`; // começa o html com o nome do álbum
     html += `<p><strong>Release date:</strong> ${album.data}</p>`; // adiciona a data de lançamento ao html
@@ -20,15 +20,19 @@ function mostrarMusicas(id) {
     html += "<ul>"; // abre lista de músicas
 
     for (let i = 0; i < album.musicas.length; i++) {
-        // percorre cada música e adiciona ao html como um item de lista
+        // percorre cada música e adiciona ao html como um item da lista
         html += `<li>${album.musicas[i]}</li>`;
     }
     html += "</ul>"; // fecha a lista
-    html += `<p><a href="${album.playlist}" target="_blank">Listen on YouTube</a></p>`; 
+    html += `<p><a href="${album.playlist}" target="_blank">Listen on YouTube</a></p>`;
     // adiciona um link para a playlist do álbum no YouTube
 
-    display.innerHTML = html; // coloca tudo dentro da div de exibição (musicas)
-    display.style.display = "block"; // exibe a div de músicas
+    display.style.opacity = '0'; // esconde antes de atualizar
+    display.innerHTML = html; // atualiza o conteúdo
+    display.style.display = 'block'; // mostra a div
+    display.style.animation = 'none'; // reseta a animação
+    display.offsetHeight; // força recalcular o layout para reiniciar a animação
+    display.style.animation = 'surgirLado 0.4s ease forwards';
 }
 
 const musicas = {

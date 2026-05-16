@@ -179,6 +179,7 @@ h3 {
     color: #ffffff;
     text-shadow: 0 0 0.3rem #ffffff, 0 0 0.6rem #ffffff;
     text-decoration: underline;
+    animation: surgirLado 0.4s ease forwards;
 }
 
 @keyframes surgirTela {
@@ -188,5 +189,17 @@ h3 {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes surgirLado {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
