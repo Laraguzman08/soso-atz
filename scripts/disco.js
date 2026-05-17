@@ -1,15 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const audio = document.getElementById("fundo-audio");
-    audio.pause();
-    // pausa no inicio
-
-    setTimeout(() => {
-        audio.play();
-    }, 4000);
-    // a música começa a tocar depois de 4 segundos, para sincronizar com o vídeo de fundo
-});
-
-
 function mostrarMusicas(id) {
     // "id" é o album clicado, por exemplo "ep1"
     const album = musicas[id];
