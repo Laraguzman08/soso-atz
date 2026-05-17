@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400&family=Cormorant+Garamond:wght@300;400&display=swap');
 /* importando duas fontes, a to título + texto comum */
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    scrollbar-width: none;
+}
+
 body {
     background-color: #000000;
     color: #ffffff;
@@ -147,7 +155,6 @@ h3 {
     width: 35%;
     aspect-ratio: 1;
     object-fit: cover;
-    box-shadow: #000000 0 0 0.6rem, #000000 0 0 1.25rem, #000000 0 0 1.9rem;
     flex-shrink: 0;
 }
 
@@ -162,26 +169,29 @@ h3 {
 }
 
 #musicas {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 0.5rem;
     min-height: 30vh;
     max-height: 50vh;
-    max-width: 40vw;
     position: sticky;
     top: 5rem;
     display: none;
+    width: 100%;
+    overflow: visible;
 }
 
 #musicas h3 {
     font-size: clamp(1rem, 2vw, 1.5rem);
+
 }
 
-#musicas a {
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
-    color: #ffffff;
-    text-shadow: 0 0 0.3rem #ffffff, 0 0 0.6rem #ffffff;
-    text-decoration: underline;
-    animation: surgirLado 0.4s ease forwards;
+#musicas p {
+    font-size: clamp(0.8rem, 3vw, 1.2rem);
+    text-shadow: #000000 0px 0px 5px, #000000 0px 0px 10px, #000000 0px 0px 20px;
+}
+
+.album-selecionado {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.3);
 }
 
 .album-selecionado p {
@@ -197,6 +207,19 @@ h3 {
     100% {
         opacity: 1;
     }
+}
+
+#fundo-era {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 @keyframes surgirLado {
