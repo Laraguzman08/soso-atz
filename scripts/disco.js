@@ -4,15 +4,16 @@ function mostrarMusicas(id, event) { // "id" é o album clicado, por exemplo "ep
 
     // se já está selecionado, fecha
     if (display.dataset.atual === id) {
-    display.style.animation = 'none';
-    display.offsetHeight;
-    display.style.animation = 'sumir 0.4s ease forwards';
-    setTimeout(() => {
-        display.style.display = 'none';
-    }, 400);
-    display.dataset.atual = '';
-    event.currentTarget.classList.remove('album-selecionado');
-    return;
+        display.style.animation = 'none';
+        display.offsetHeight;
+        display.style.animation = 'sumir 0.4s ease forwards';
+        setTimeout(() => {
+            display.style.display = 'none';
+        }, 400);
+        display.dataset.atual = '';
+        event.currentTarget.classList.remove('album-selecionado');
+        document.getElementById('fundo-era').style.opacity = '0';
+        return;
     }
 
     display.dataset.atual = id; // salva qual álbum está aberto
@@ -23,18 +24,32 @@ function mostrarMusicas(id, event) { // "id" é o album clicado, por exemplo "ep
     });
     event.currentTarget.classList.add('album-selecionado'); // destaca o álbum clicado
 
-    let html = `<h3>${album.nome}</h3>`; // começa o html com o nome do álbum
+    const fundo = document.getElementById('fundo-era');
+    fundo.style.opacity = '0';
+    display.style.animation = 'sumir 0.3s ease forwards';
+
+    let html = '<div style="display: flex; gap: 2rem; align-items: flex-start; justify-content: space-between;">';
+    html += `<div style="flex: 1; width: 100%">`;
+    html += `<h3>${album.nome}</h3>`; // começa o html com o nome do álbum
     html += `<p><strong>Release date:</strong> ${album.data}</p>`; // adiciona a data de lançamento ao html
     html += `<p><strong>Type:</strong> ${album.tipo}</p>`; // adiciona o tipo de álbum ao html
-    html += `<iframe src="https://open.spotify.com/embed/album/${album.playlist}?utm_source=generator&theme=0" width="100%" height="350" frameborder="0" style="border-radius: 0.75rem;"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+    html += `<p>${album.descricao}</p>`; // adiciona a descrição do álbum ao html
+    html += `<iframe onload="this.style.opacity='1'" src="https://open.spotify.com/embed/album/${album.playlist}?utm_source=generator&theme=0" width="100%" height="300" frameborder="0" style="border-radius: 0.75rem; opacity: 0; transition: opacity 0.4s ease;"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
     // adiciona um link para a playlist do álbum no Spotify
+    html += `</div>`; // fecha a div de informações
+    html += `<img src="${album.poster}" alt="${album.nome} poster" style="width: 30%; height: 400; border-radius: 0.75rem;">`; // adiciona o poster do álbum
+    html += '</div>'; // fecha a div principal
 
-    display.style.opacity = '0'; // esconde antes de atualizar
-    display.innerHTML = html; // atualiza o conteúdo
-    display.style.display = 'block'; // mostra a div
-    display.style.animation = 'none'; // reseta a animação
-    display.offsetHeight; // força recalcular o layout para reiniciar a animação
-    display.style.animation = 'surgirLado 0.4s ease forwards';
+    setTimeout(() => {
+        fundo.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${album.fundo})`;
+        fundo.style.opacity = '1';
+        display.innerHTML = html;
+        display.style.display = 'block';
+        display.style.animation = 'none';
+        display.offsetHeight;
+        display.style.animation = 'surgirLado 0.4s ease forwards';
+    }, 400);
+
 }
 
 const musicas = {
@@ -43,24 +58,36 @@ const musicas = {
         data: "October 24, 2018",
         tipo: "Mini Album",
         playlist: "3iS3jNsGNXWcKb653VpDNV",
+        fundo: "../assets/backgrounds/ep1era.jpg", // imagem de fundo dessa era
+        descricao: "ATEEZ’s debut mini album marks the beginning of the conceptual <strong>Treasure</strong> series. Serving as a prologue, the project portrays the eight members at the start of a long journey, setting out into a wider world as budding anarchists and revolutionaries, guided by their hearts in search of the treasure that lies within themselves.",
+        poster: "../assets/posters/posterep1.jpg" // poster do álbum
     },
     ep2: {
         nome: "TREASURE EP.2: Zero To One",
         data: "January 15, 2019",
         tipo: "Mini Album",
         playlist: "0mjLsC33mcxN5yBdtwqmIQ",
+        fundo: "../assets/backgrounds/ep2era.jpg",
+        descricao: "Their second mini album represents the awakening of the narrative, as the group comes together and discovers masked alter egos in a dystopian dimension. The project explores themes of identity and rebellion through the title tracks “Say My Name” and “HALA HALA (Hearts Awakened, Live Alive).”",
+        poster: "../assets/posters/posterep2.jpg"
     },
     ep3: {
         nome: "TREASURE EP.3: One To All",
         data: "June 10, 2019",
         tipo: "Mini Album",
         playlist: "1w1dfDuyqz63mHJv1A8Xmk",
+        fundo: "../assets/backgrounds/ep3era.jpg",
+        descricao: "ATEEZ’s third mini album represents the moment when the group enters a tropical illusion before confronting the reality of their journey. Serving as a turning point in the storyline, the members are caught between a perfect dream and the real world, and must decide whether to remain in a false utopia or confront the storms of reality. The title <strong>One to All</strong> symbolizes the group’s complete unity and the spread of their message to the world.",
+        poster: "../assets/posters/posterep3.jpg"
     },
     ep4: {
         nome: "TREASURE EP.FIN: All To Action",
         data: "October 8, 2019",
         tipo: "Full-Length Album",
         playlist: "5AVSEEmCz4qwDiArvX6ZOx",
+        descricao: "ATEEZ’s first full-length studio album serves as the climax and official conclusion of the main <strong>Treasure</strong> saga. The project unfolds like a battle march: after awakening from the paradise-like illusion of the previous album, the members raise their flags and move forward to fight against an oppressive system and help liberate the world. The title <strong>All to Action</strong> is a call for the entire crew to stop running and begin the final revolution.",
+        fundo: "../assets/backgrounds/ep4era.jpg",
+        poster: "../assets/posters/posterep4.jpg"
     },
     ep5: {
         nome: "TREASURE EPILOGUE : Action To Answer",
