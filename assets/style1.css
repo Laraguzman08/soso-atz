@@ -163,7 +163,8 @@ h3 {
 #musicas {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 0.5rem;
-    min-height: 50vh;
+    min-height: 30vh;
+    max-height: 50vh;
     max-width: 40vw;
     position: sticky;
     top: 5rem;
