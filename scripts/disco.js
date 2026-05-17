@@ -1,7 +1,27 @@
-function mostrarMusicas(id) {
-    // "id" é o album clicado, por exemplo "ep1"
-    const album = musicas[id];
+function mostrarMusicas(id, event) { // "id" é o album clicado, por exemplo "ep1"
     const display = document.getElementById('musicas'); // div onde as músicas serão exibidas
+    const album = musicas[id]; // pega as informações do álbum clicado
+
+    // se já está selecionado, fecha
+    if (display.dataset.atual === id) {
+    display.style.animation = 'none';
+    display.offsetHeight;
+    display.style.animation = 'sumir 0.4s ease forwards';
+    setTimeout(() => {
+        display.style.display = 'none';
+    }, 400);
+    display.dataset.atual = '';
+    event.currentTarget.classList.remove('album-selecionado');
+    return;
+    }
+
+    display.dataset.atual = id; // salva qual álbum está aberto
+
+    // tira o destaque de todos os álbuns
+    document.querySelectorAll('.d-flex.align-items-center.gap-3').forEach(el => {
+        el.classList.remove('album-selecionado');
+    });
+    event.currentTarget.classList.add('album-selecionado'); // destaca o álbum clicado
 
     let html = `<h3>${album.nome}</h3>`; // começa o html com o nome do álbum
     html += `<p><strong>Release date:</strong> ${album.data}</p>`; // adiciona a data de lançamento ao html

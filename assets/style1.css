@@ -144,10 +144,11 @@ h3 {
 }
 
 .album-capa {
-    width: 55%;
+    width: 35%;
     aspect-ratio: 1;
     object-fit: cover;
-    box-shadow: #000000 0px 0px 10px, #000000 0px 0px 20px, #000000 0px 0px 30px;
+    box-shadow: #000000 0 0 0.6rem, #000000 0 0 1.25rem, #000000 0 0 1.9rem;
+    flex-shrink: 0;
 }
 
 /* esconde a barra de rolagem no Firefox */
@@ -183,6 +184,11 @@ h3 {
     animation: surgirLado 0.4s ease forwards;
 }
 
+.album-selecionado p {
+    text-shadow: 0 0 0.5rem #ffffff, 0 0 1rem #ffffff;
+    color: #ffffff;
+}
+
 @keyframes surgirTela {
     0% {
         opacity: 0;
@@ -203,4 +209,9 @@ h3 {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@keyframes sumir {
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(20px); }
 }
