@@ -1,22 +1,31 @@
-validarLogin() {
-    const nome = document.getElementById('nome').value;
-    const senha = document.getElementById('senha').value;
+console.log('Login script loaded');
 
-    if (nome === 'Esposa do woyoung' && senha === '27052008') {
-        alert('Login successful!');
-        return true; // Permite o envio do formulário
-    } else {
-        alert('Invalid username or password. Please try again.');
-        return false; // Impede o envio do formulário
+function validarLogin() {
+
+    let nome = document.getElementById('nome').value;
+    let senha = document.getElementById('senha').value;
+
+    let erro = document.getElementById('problema');
+    let errorBox = document.getElementById('error-message');
+
+    errorBox.style.display = 'none'; // Esconde a caixa de erro antes de validar
+
+    const nomeCorreto = 'Esposa do Wooyoung';
+    const senhaCorreta = '27052008';
+
+    if (nome === "" || senha === "") {
+        erro.textContent = 'Please fill in all fields!';
+        errorBox.style.display = 'block';
+        return false;
+    } // Verifica se os campos estão vazios
+
+    if (nome !== nomeCorreto || senha !== senhaCorreta) {
+        erro.textContent = 'Incorrect username or password. Please try again!';
+        errorBox.style.display = 'block';
+        return false; // Verifica se o nome ou senha estão incorretos
     }
 
-function dica() {
+    window.location.href = 'transicao.html'; // Redireciona para a página de transição;
+    return false;
 
-    const nomeDica = 'Esposa do woyoung';
-    const senhaDica = '27052008';
-
-    
-
-
-    alert('Hint: Think of a hopeless romantic\'s username~ 💕 It begins with \"Esposa\" and ends with \"do Woyoung\", and the password is a significant date 🎂🎀');
 }

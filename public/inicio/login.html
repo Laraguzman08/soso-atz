@@ -24,41 +24,41 @@
 
                     <form id="login-form" class="d-flex flex-column gap-3"
                         style="justify-content: center; align-items: center;" onsubmit="return validarLogin()">
+
                         <div class="form-group">
                             <label for="nome" style="color: #000; font-weight: bold">
                                 Username
                             </label>
                             <input type="text" id="nome" class="form-control" placeholder="Enter your username"
                                 style="border: 2px solid #000;">
-                            </input>
-
-
                         </div>
 
                         <div class="form-group">
-
                             <label for="senha" style="color: #000; font-weight: bold">
                                 Password
                             </label>
-
-                            <input type="password" id="senha" class="form-control mb-4" placeholder="Enter your password"
-                                style="border: 2px solid #000;">
-                            </input>
-
-
+                            <input type="password" id="senha" class="form-control mb-4"
+                                placeholder="Enter your password" style="border: 2px solid #000;">
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-lg px-4 button btn-custom" style="width: 120%;">
+                        <button type="submit" class="btn btn-primary btn-lg px-4 button btn-custom"
+                            style="width: 120%;">
                             Enter
                         </button>
 
-                        <button type="button" class="btn btn-primary btn-lg px-4 button btn-custom" style="width: 120%;" onclick="dica()">
+                        <button type="button" class="btn btn-primary btn-lg px-2 button btn-custom" style="width: 120%;"
+                            onclick="dica()">
                             Hint (◕‿◕)
                         </button>
 
+                        <div id="error-message" style="display: none">
+                            <p id="problema" class="text-danger"
+                                style="font-weight: bold; text-shadow: 1px 1px 2px #ffacac4d; text-align: center;"></p>
+                        </div>
+
                     </form>
 
-                    <script src="../scripts/login.js"></script>
+                    <script src="../../scripts/login.js"></script>
 
                 </div>
             </div>
