@@ -315,3 +315,60 @@ h3 {
     outline: none;
     border-color: transparent;
 }
+
+#dicaMenssagem {
+    display: block; 
+    position: absolute;
+    top: 50%; /* Aparece no topo do container */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #fffdec;
+    border: 1px solid #f0e68c;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    z-index: 10; /* z-index alto para garantir que fique acima de outros elementos */
+    max-width: 80%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+#dicaMenssagem.ativa {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.botao-fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.botao-fechar:hover {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+#dicaTexto {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    min-height: 80px;
+}
