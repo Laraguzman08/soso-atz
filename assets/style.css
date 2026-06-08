@@ -322,8 +322,8 @@ h3 {
     top: 50%; /* Aparece no topo do container */
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    background-color: #fffdec;
-    border: 1px solid #f0e68c;
+    background-color: hsl(0, 0%, 100%);
+    border: solid #ffffff;
     padding: 2.5rem 1.5rem 1.5rem 1.5rem;
     border-radius: 6px;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
@@ -343,11 +343,11 @@ h3 {
 
 .botao-fechar {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.6rem;
+    right: 0.6rem;
 
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 
     padding: 0;
     margin: 0;
@@ -355,7 +355,7 @@ h3 {
     border: none;
     background: transparent;
 
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 1;
     cursor: pointer;
 }
@@ -367,8 +367,8 @@ h3 {
 
 #dicaTexto {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #333;
     font-weight: bold;
-    min-height: 80px;
+    min-height: 2rem;
 }
