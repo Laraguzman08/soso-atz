@@ -1,16 +1,15 @@
-/* estilizando páginas home, members, disco */
-
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400&family=Cormorant+Garamond:wght@300;400&display=swap');
 /* importando duas fontes, a to título + texto comum */
 
-::-webkit-scrollbar {
+::-webkit-scrollbar { /* esconde a barra de rolagem no Chrome */
     display: none;
 }
 
 * {
-    scrollbar-width: none;
+    scrollbar-width: none; /* esconde a barra de rolagem no Firefox */
 }
 
+/* Estilos globais */
 body {
     background-color: #000000;
     color: #ffffff;
@@ -52,13 +51,13 @@ p {
     text-shadow: 0 0 10px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
 
-.card-text {
+.card-text { /* classe para os textos dentro dos cards */
     font-weight: 500;
     font-size: clamp(0.9rem, 2vw, 1.5rem);
     color: black;
 }
 
-#body1 {
+#body1 { /* estilo específico para o body da disco e members */
     background-color: hsl(228, 19%, 10%);
 }
 
@@ -108,7 +107,7 @@ h3 {
     text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
 
-.nav-link-act {
+.nav-link-act { /* classe para o link ativo no header */
     font-family: 'Cinzel', serif;
     font-weight: bold;
     color: #ffffff;
@@ -122,7 +121,7 @@ h3 {
 
 .ateez {
     opacity: 0.80;
-    ;
+    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
 
 .group {
@@ -141,7 +140,7 @@ h3 {
     pointer-events: none;
 }
 
-#fundo-vid {
+#fundo-vid { 
     position: fixed;
     top: 0;
     left: 0;
@@ -199,7 +198,7 @@ h3 {
     color: #ffffff;
 }
 
-@keyframes surgirTela {
+@keyframes surgirTela { /* animação para o fade-in da tela */
     0% {
         opacity: 0;
     }
@@ -222,7 +221,7 @@ h3 {
     transition: opacity 0.4s ease;
 }
 
-@keyframes surgirLado {
+@keyframes surgirLado { /* animação para o fade-in com movimento lateral */
     0% {
         opacity: 0;
         transform: translateX(-20px);
@@ -234,7 +233,59 @@ h3 {
     }
 }
 
-@keyframes sumir {
+@keyframes sumir { /* animação para o fade-out com movimento lateral */
     0% { opacity: 1; transform: translateX(0); }
     100% { opacity: 0; transform: translateX(20px); }
+}
+
+/* estilização dos arquivos da pasta inicio dentro de public (inicio, login e transicao) */
+
+.title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 8vw, 5rem);
+    font-weight: 300;
+    letter-spacing: 0.4em;
+    /* font-weight: grossura da letra; 
+    letter-spacing: espaçamento entre letras; 0.4 em = 20px */
+    color: #fff;
+    display: inline-block;
+    transform: perspective(500px) rotateX(15deg);
+    /* display: inline-block é necessário para que o transform funcione;
+    transform: perspective() cria profundidade 3D, rotateX() deixa o texto inclinado */
+    animation: surgir 2s ease forwards;
+    /* surgir = nome da animação
+    2s: duração
+    ease: começa rápido e termina devagar
+    forwards: mantém o estado final da animação ao terminar  */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+@keyframes surgir {
+    0% { 
+        opacity: 0; /* começa invisível */
+        transform: perspective(500px) rotateX(15deg) translateY(-30px); 
+        /* começa invisível e um pouco acima */
+    }
+    100% { 
+        opacity: 1; /* termina visível */
+        transform: perspective(500px) rotateX(15deg) translateY(0); 
+        /* termina visível na posição normal */
+    }
+}
+
+.mensagemInicial {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    animation: fadeInOut 5s forwards;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/* @keyframes define uma animação passo a passo; "fadeInOut" é o nome da animação */
+@keyframes fadeInOut { 
+    0% {opacity: 0;} /* começa invisível */
+    30% {opacity: 1;} /* aparece */
+    70% {opacity: 1;} /* fica visível */
+    100% {opacity: 0;} /* some */
 }
