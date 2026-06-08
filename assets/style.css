@@ -289,3 +289,29 @@ h3 {
     70% {opacity: 1;} /* fica visível */
     100% {opacity: 0;} /* some */
 }
+
+#login-title { /* estilo pro login */
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    color: #232323;
+    justify-self: center;
+    letter-spacing: 0.3em;
+    margin: 0;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.btn-custom { /*custumizar botão*/
+    background-color: transparent;
+    border: 2px solid hsl(0, 0%, 0%);
+    color: hwb(0 0% 100%);
+    text-shadow: 0 0 5px hsl(0, 0%, 100%), 0 0 10px hwb(0 100% 0%), 0 0 20px #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover { /* efeito de hover (quando o mouse tiver sobre o botão) */
+    background-color: #007bff;
+    color: hsl(0, 0%, 100%);
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    outline: none;
+    border-color: transparent;
+}
