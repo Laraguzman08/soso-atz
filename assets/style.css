@@ -115,18 +115,15 @@ h3 {
 }
 
 .logo {
-    opacity: 0.85;
-    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    opacity: 0.90;
 }
 
 .ateez {
-    opacity: 0.80;
-    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
+    opacity: 0.87;
 }
 
 .group {
     opacity: 0.95;
-    text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
 }
 
 #filtro {
