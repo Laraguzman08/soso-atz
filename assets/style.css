@@ -85,9 +85,16 @@ h3 {
     color: #ffffff;
     background-color: transparent;
     border: 2px solid #ffffff;
+    border-radius: 0.4rem;
     padding: 0.6rem 1.2rem;
     cursor: pointer;
     text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.button:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
 }
 
 .titleMenor {
@@ -166,12 +173,12 @@ h3 {
 
 #musicas {
     min-height: 30vh;
-    max-height: 50vh;
+    max-height: 75vh;
     position: sticky;
     top: 5rem;
     display: none;
     width: 100%;
-    overflow: visible;
+    overflow-y: auto;
 }
 
 #musicas h3 {
@@ -368,4 +375,107 @@ h3 {
     color: #333;
     font-weight: bold;
     min-height: 2rem;
+}
+
+/* ABAIXO DAQ PARA A DISCO/KARAOKE, não mexe no q tá pra cima */
+
+.info-grid {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.info-text {
+    flex: 1;
+    min-width: 0;
+}
+.info-spotify {
+    flex: 1;
+    max-width: 45%;
+}
+
+.linha-ativa {
+    opacity: 1;
+    transform: scale(1.05);
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff;
+}
+
+.albuns {
+    max-height: 65vh;
+    min-height: 65vh;
+    display: flex;
+    align-items: safe center;
+    overflow-y: auto;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 5%, black 95%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, black 5%, black 95%, transparent 100%);
+    scroll-behavior: smooth;
+    padding-right: 0.5rem;
+}
+
+.albuns > div {
+    width: 100%;
+}
+
+.karaoke-controles {
+    flex-shrink: 0;
+    padding-bottom: 0.5rem;
+}
+
+.linha-karaoke {
+    opacity: 0.4;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin: 1rem 0;
+}
+
+.linha-coreano {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin: 0;
+}
+
+.linha-romanizacao {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    opacity: 0.75;
+    margin: 0.3rem 0 0 0;
+}
+
+.linha-ativa {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.linha-ativa .linha-coreano,
+.linha-ativa .linha-romanizacao {
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff;
+}
+
+.karaoke-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem; /* reduzido de 2.5rem */
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 1rem;
+    backdrop-filter: blur(4px);
+}
+
+.karaoke-title {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* reduzido de 3.5rem-7rem */
+    text-align: center;
+    margin-bottom: 1rem; /* reduzido de 3rem */
+}
+
+#karaoke-lyrics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    max-height: 30vh; /* reduzido de 40vh, deixa mais espaço garantido pros botões */
+    overflow-y: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
 }
