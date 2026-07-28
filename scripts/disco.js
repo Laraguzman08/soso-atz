@@ -268,7 +268,7 @@ const musicas = {
         tipo: "Mini Album",
         playlist: "1w1dfDuyqz63mHJv1A8Xmk",
         fundo: "../assets/backgrounds/ep3era.jpg",
-        descricao: "ATEEZ’s third mini album represents the moment when the group enters a tropical illusion before confronting the reality of their journey. Serving as a turning point in the storyline, the members are caught between a perfect dream and the real world, and must decide whether to remain in a false utopia or confront the storms of reality. The title One to All symbolizes the group’s complete unity and the spread of their message to the world.",
+        descricao: "ATEEZ’s third mini album represents the moment when the group enters a tropical illusion before confronting the reality of their journey. Serving as a major turning point in the Treasure storyline, the members must choose between remaining in a false paradise or facing the challenges of the real world together.",
         faixaPrincipal: {
             titulo: "ILLUSION",
             instrumental: "../assets/songs/ep3-instr.mp3",
@@ -368,7 +368,7 @@ const musicas = {
         data: "October 8, 2019",
         tipo: "Full-Length Album",
         playlist: "5AVSEEmCz4qwDiArvX6ZOx",
-        descricao: "ATEEZ’s first full-length studio album serves as the climax and official conclusion of the main Treasure saga. The project unfolds like a battle march: after awakening from the paradise-like illusion of the previous album, the members raise their flags and move forward to fight against an oppressive system and help liberate the world. The title <strong>All to Action</strong> is a call for the entire crew to stop running and begin the final revolution.",
+        descricao: "ATEEZ’s first full-length studio album serves as the climax and official conclusion of the main Treasure saga. Following their escape from the paradise-like illusion, the members unite to challenge an oppressive system, inspire change, and lead the final revolution. The title All to Action reflects their determination to move forward together.",
         fundo: "../assets/backgrounds/ep4era.jpg",
         poster: "../assets/posters/posterep4.jpg"
     },
