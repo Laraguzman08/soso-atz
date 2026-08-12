@@ -1536,12 +1536,16 @@ const musicas = {
         data: "June 1, 2024",
         tipo: "Collaboration Single",
         playlist: "57miIs3v5jsOL4DGMj8cnK",
+        descricao: "“Hush-Hush” is a digital collaboration single by Japanese group BE:FIRST and ATEEZ, exploring themes of self-confidence, determination, and overcoming adversity. The song presents the two groups as underdogs who refuse to be defined by criticism or limitations, embracing their identity and strength while pursuing victory. Its powerful visuals, including a solar eclipse and distorted cityscape, symbolize subtle yet transformative change.",
+        fundo: "../assets/backgrounds/ep17era.jpg",
     },
     ep18: {
         nome: "Birthday",
         data: "October 2, 2024",
         tipo: "Japanese Single",
         playlist: "4lgToZ6PFbsj6PpN1qfKGa",
+        descricao: "ATEEZ’s fourth Japanese single album embraces a concept of boldness, renewal, and celebration. Through its title track “Birthday,” the album encourages listeners to break away from routine and experience each day with the same joy and excitement as a birthday. With its message of living in the present and awakening one’s inner strength, the project celebrates freedom, freshness, and the desire to start anew.",
+        fundo: "../assets/backgrounds/ep18era.jpg",
     },
     ep19: {
         nome: "GOLDEN HOUR : Part.2",
