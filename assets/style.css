@@ -494,6 +494,15 @@ h3 {
     align-items: center;
     justify-content: center;
     height: calc(100vh - 4rem);
+    transition: opacity 0.6s ease; 
+}
+
+.atzflix-intro {
+    transition: opacity 0.6s ease;
+}
+
+.atzflix-intro.fade-out {
+    opacity: 0;
 }
 
 .atzflix-logo {
@@ -526,6 +535,7 @@ h3 {
     min-height: calc(100vh - 4rem);
     padding: 2rem;
     gap: 2rem;
+    transition: opacity 0.6s ease;
 }
 
 .perfis-titulo {
@@ -534,21 +544,21 @@ h3 {
 
 .perfis-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 1.5rem;
-    max-width: 900px;
+    gap: 1rem;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
 }
 
 .perfil-card {
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease;
-    width: 120px;
-}
-
-.perfil-card:hover {
-    transform: scale(1.08);
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 110px;
 }
 
 .perfil-foto {
@@ -564,9 +574,22 @@ h3 {
     border-color: #ffffff;
 }
 
+.perfil-foto {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
 /* Catálogo */
 .atzflix-catalogo {
     padding: 1.5rem 2rem;
+    transition: opacity 0.6s ease;
+    background: radial-gradient(ellipse 1200px 600px at top, rgba(229, 9, 20, 0.25), transparent 70%),
+                #000000;
+    min-height: calc(100vh - 4rem);
 }
 
 .catalogo-topo {
@@ -604,12 +627,12 @@ h3 {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
-    padding-bottom: 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
 .video-card {
-    flex-shrink: 0;
-    width: 220px;
+    flex: 0 0 auto;
+    width: clamp(140px, 18vw, 220px);
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -620,7 +643,7 @@ h3 {
 
 .video-card img {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 0.4rem;
 }
