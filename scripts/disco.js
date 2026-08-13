@@ -1708,24 +1708,41 @@ const musicas = {
         data: "June 13, 2025",
         tipo: "Mini Album",
         playlist: "5LlszztgR3YH7aN7SPgTVi",
+        descricao: "ATEEZ’s twelfth EP continues the GOLDEN HOUR series with a vibrant summer-inspired chapter that captures the intensity and freedom of a summer night. Led by “Lemon Drop,” the album explores themes of youth, desire, and living in the moment, combining a refreshing yet passionate atmosphere with the group’s energetic sound and a sense of limitless freedom.",
+        fundo: "../assets/backgrounds/ep20era.jpg",
     },
     ep21: {
         nome: "GOLDEN HOUR : Part.3 ‘In Your Fantasy Edition’",
         data: "July 11, 2025",
         tipo: "Mini Album Repackage",
         playlist: "2rBtlOpNMuE4u9imyZz0YL",
+        descricao: "The repackage of their twelfth EP expands the GOLDEN HOUR series by exploring the boundary between reality and desire. Centered around “In Your Fantasy,” the project introduces the group’s first fully English lead single while featuring eight solo tracks, allowing each member to showcase their individual artistry. Together, the album creates an immersive journey through fantasy, identity, and personal desires.",
+        fundo: "../assets/backgrounds/ep21era.jpg",
     },
     ep22: {
         nome: "Ashes to Light",
         data: "September 17, 2025",
         tipo: "Japanese Full Album",
         playlist: "0N3IF32AyRsrhGO8YIl4qF",
+        descricao: "ATEEZ’s third full-length Japanese album explores the idea of hope emerging from the ashes of hardship. Centered around the title track “Ash,” the project reflects on overcoming difficult moments and finding the strength to begin again. Blending new songs with Japanese versions of previous releases, the album presents a message of resilience, renewal, and hope rising from adversity.S",
+        fundo: "../assets/backgrounds/ep22era.jpg",
     },
     ep23: {
         nome: "GOLDEN HOUR : Part.4",
         data: "February 6, 2026",
         tipo: "Mini Album",
         playlist: "1FBxW4I6azDVjGallQ4wQk",
+        descricao: "ATEEZ’s thirteenth EP continues the GOLDEN HOUR series by reflecting on the group’s journey, unity, and determination to remain true to their beliefs. Serving as a celebration of their history and bond with fans, the album explores the strength to move forward through adversity while capturing meaningful moments along the road, balancing darker sounds with softer, heartfelt emotions.",
+        fundo: "../assets/backgrounds/ep23era.jpg",
+    },
+
+    ep24: {
+        nome: "GOLDEN HOUR : Part.5",
+        data: "June 26, 2026",
+        tipo: "Mini Album",
+        playlist: "6Eg6B1mgGj2dGLBajzsVpV",
+        descricao: "ATEEZ’s fourteenth EP continues the GOLDEN HOUR series with a darker, more introspective, and mysterious chapter. Led by the title track “Bad,” the album explores themes of doubt, self-questioning, and uncertainty while incorporating mysterious elements from the group’s previous lore. With its bold sound and global influences, the project introduces a new conceptual phase in ATEEZ’s evolving narrative.",
+        fundo: "../assets/backgrounds/ep24era.jpg"
     },
 }
 
