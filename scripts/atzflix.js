@@ -143,7 +143,7 @@ const categorias = {
             { id: "z8_zPoO_HcM", titulo: "8 makes 1 braincell part 1" },
             { id: "hKdmvIGzpfw", titulo: "8 makes 1 braincell part 2" },
             { id: "I9iHGtZZFmE", titulo: "ATEEZ being ATEEZ" },
-            { id: "I9iHGtZZFmE", titulo: "Thinking about ATEEZ" },
+            { id: "_2MC8Wc_T6o", titulo: "Thinking about ATEEZ" },
         ]
     }
 };
