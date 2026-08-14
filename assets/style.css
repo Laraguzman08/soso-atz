@@ -1137,3 +1137,148 @@ h3 {
         width: 60%;
     }
 }
+
+
+
+
+
+
+
+/* ===================================================== */
+/* ===== RESPONSIVIDADE MOBILE — */
+/* ===================================================== */
+
+/* Rede de segurança: nunca deixa nada vazar pra fora da tela horizontalmente */
+html {
+    overflow-x: hidden;
+}
+
+/* ===== HEADER / NAV — em todas as páginas ===== */
+@media (max-width: 900px) {
+    header.d-flex {
+        flex-wrap: wrap;
+        row-gap: 0.5rem;
+        padding: 0.8rem 1rem !important;
+    }
+
+    header nav.d-flex {
+        flex-wrap: wrap;
+        gap: 0.7rem 1rem !important;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-link, .nav-link-act {
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ===== DISCOGRAFIA (disco.html) ===== */
+@media (max-width: 900px) {
+    .row.flex-nowrap {
+        flex-wrap: wrap !important;
+    }
+
+    .row.flex-nowrap > .col-md-3,
+    .row.flex-nowrap > .col-md-8 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        width: 100%;
+    }
+
+    .albuns {
+        max-height: 40vh !important;
+        min-height: unset !important;
+    }
+
+    #musicas {
+        position: static !important;
+        max-height: none !important;
+    }
+
+    .info-grid, .karaoke-grid {
+        flex-direction: column !important;
+    }
+
+    .info-spotify {
+        max-width: 100% !important;
+    }
+
+    .karaoke-container {
+        padding: 1rem !important;
+    }
+}
+
+/* ===== ATZFLIX ===== */
+@media (max-width: 600px) {
+    .perfis-grid {
+        flex-wrap: wrap !important;
+        justify-content: center;
+    }
+
+    .perfil-card {
+        max-width: 80px !important;
+    }
+
+    .atzflix-logo text {
+        font-size: 5rem;
+    }
+
+    .categoria-titulo {
+        text-align: center;
+    }
+}
+
+/* ===== LOGIN (inicio/login.html) — sobrescreve o max-width: 30% inline ===== */
+@media (max-width: 700px) {
+    main.d-flex.align-items-center.justify-content-center.vh-100 > .container {
+        max-width: 90% !important;
+        padding: 1.5rem !important;
+    }
+
+    #login-title {
+        font-size: 1.6rem !important;
+    }
+}
+
+/* ===== MEMBERS — grid do Bootstrap já empilha sozinho, só ajusta espaçamento ===== */
+@media (max-width: 600px) {
+    .container.mt-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* ===== HOME — ajusta o hero pra caber melhor ===== */
+@media (max-width: 600px) {
+    main.container.text-center img.ateez {
+        width: 55% !important;
+    }
+
+    .home-botoes {
+        flex-direction: column;
+        gap: 0.8rem !important;
+    }
+
+    .home-botoes a {
+        width: 80%;
+    }
+}
+
+/* ===== LORE ===== */
+@media (max-width: 600px) {
+    .lore-hero-img {
+        width: 100%;
+    }
+}
+
+/* ===== FINAL MESSAGE ===== */
+@media (max-width: 500px) {
+    .final-card {
+        padding: 1.8rem 1.2rem;
+    }
+
+    .final-img {
+        width: 100px;
+    }
+}
